@@ -12,10 +12,9 @@ const TrackOrder = () => {
       <h3 className="text-xl font-medium mb-4">Track your order through</h3>
       
       <Tabs defaultValue="mobile" value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid grid-cols-4 mb-6">
+        <TabsList className="grid grid-cols-3 mb-6">
           <TabsTrigger value="mobile">Mobile</TabsTrigger>
-          <TabsTrigger value="awb">AWB</TabsTrigger>
-          <TabsTrigger value="orderid">Order Id</TabsTrigger>
+          <TabsTrigger value="vehicle">Truck/Vehicle Number</TabsTrigger>
           <TabsTrigger value="lrn">LRN</TabsTrigger>
         </TabsList>
         
@@ -30,21 +29,10 @@ const TrackOrder = () => {
           </Button>
         </TabsContent>
         
-        <TabsContent value="awb" className="space-y-4">
+        <TabsContent value="vehicle" className="space-y-4">
           <Input 
             type="text" 
-            placeholder="Enter AWB number"
-            className="w-full"
-          />
-          <Button className="w-full bg-garvish-dark hover:bg-garvish-red">
-            Track
-          </Button>
-        </TabsContent>
-        
-        <TabsContent value="orderid" className="space-y-4">
-          <Input 
-            type="text" 
-            placeholder="Enter Order ID"
+            placeholder="Enter Truck or Vehicle Number"
             className="w-full"
           />
           <Button className="w-full bg-garvish-dark hover:bg-garvish-red">
